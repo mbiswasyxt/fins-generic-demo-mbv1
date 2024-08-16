@@ -39,14 +39,14 @@ const FAQAccordion = ({ question, answerV2 }: FAQProps) => {
           <h4 className="text-left">{question}</h4>
           <ChevronDownIcon className="size-5 text-primary fill-primary group-data-[hover]:fill-primary/50 group-data-[open]:rotate-180" />
         </DisclosureButton>
-        <div className="overflow-hidden">
+        <article className="overflow-hidden">
           <DisclosurePanel
             transition
             className="origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0 text-sm md:text-base"
           >
             <LexicalRichText serializedAST={JSON.stringify(answerV2.json)} />
           </DisclosurePanel>
-        </div>
+        </article>
       </Disclosure>
     </section>
   );
